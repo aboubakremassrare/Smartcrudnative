@@ -5,6 +5,8 @@ const HomeScreen = () => {
   return <Text style={styles.text}>HomeScreen</Text>;
 };
 
+
+//Styles
 const styles = StyleSheet.create({
   text: {
     fontSize: 30

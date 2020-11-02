@@ -29,12 +29,10 @@ const addblogPost = (dispatch) =>{
         dispatch({type:'add_blogpost',payload:{title,content}}); 
         //si le callbacl exist parfois declenche un erreur
         if(callback){
-
             callback();
         }
      
     }
-  
 };
 
 const deleteblogPost = (dispatch) =>{
@@ -43,7 +41,6 @@ const deleteblogPost = (dispatch) =>{
     }
   
 };
-
 const editblogPost = dispatch =>{
     return (id,title,content,callback) => {
         dispatch({
@@ -64,25 +61,3 @@ export const {Context,Provider} = createDataContext(
 
 );
 
-
-
-//methode 1
-
-// import React, {useState} from 'react';
-
-
-// const BlogContext = React.createContext();
-
-
-
-// export const BlogProvider = ({children}) => {
-//     const [blogPosts,setblogPosts] =useState([]);
-
-//     const addblogPost = () =>{
-//         setblogPosts([...blogPosts,{title:`Blog Post #${blogPosts.length +1}`}]);
-//     }
-
-// return <BlogContext.Provider value={{data:blogPosts,addblogPost}}>{children}</BlogContext.Provider>
-// };
-
-// export default BlogContext;
